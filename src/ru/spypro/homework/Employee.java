@@ -1,13 +1,14 @@
 package ru.spypro.homework;
 
 public class Employee {
-    String familyName;
-    int department;
-    int salary;
-    int id;
+    private String familyName;
+    private int department;
+    private int salary;
+    private int id;
+    private static int counter;
 
     public Employee(int id, String familyName, int department, int salary) {
-        this.id = id;
+        this.id = counter++;
         this.familyName = familyName;
         this.department = department;
         this.salary = salary;
