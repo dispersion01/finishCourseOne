@@ -1,1 +1,4 @@
 /finishCourseOne.iml
+*.iml
+*.class
+/.idea/
