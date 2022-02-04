@@ -14,12 +14,23 @@ public class DataEmployee {
         dataOfWEmployee[8] = new Employee(1, "Orlov", 02, 210_000);
         dataOfWEmployee[9] = new Employee(1, "Romanova", 01, 300_000);
         dataOfWEmployee.toString();
+        System.out.println("Метод 1. Вывод всех сотрудников:");
         allEmployee(dataOfWEmployee);
+
+        System.out.println("Метод 2. Сумма затрат на зарплаты:");
         sumOfSalary(dataOfWEmployee);
+
+        System.out.println("Метод 3. Сотрудник с минимальной зарплатой:");
         minSalary(dataOfWEmployee);
+
+        System.out.println("Метод 4. Среднее значение зарплат:");
         midSalary(dataOfWEmployee);
+
+        System.out.println("Метод 5. Сотрудник с максимальной зарплатой:");
         maxSalary(dataOfWEmployee);
 
+        System.out.println("Метод 6. ФИО всех сотрудников");
+        onlyNamesEmployee(dataOfWEmployee);
     }
 
     public static void allEmployee(Employee[] dataOfWEmployee) { //вывести всех сотрудников
@@ -57,7 +68,7 @@ public class DataEmployee {
         int max = dataOfWEmployee.length;
         for (int i = 0; i < dataOfWEmployee.length; i++) {
             if (dataOfWEmployee[i].getSalary() > min) {
-                min = dataOfWEmployee[i].getSalary();
+                max = dataOfWEmployee[i].getSalary();
             }
         }
         System.out.println(max);
@@ -69,7 +80,9 @@ public class DataEmployee {
         System.out.println(midSalarySum);
     }
 
-    public static void onlyNamesEmployee(Employee dataOfWEmployee) { //ФИО сотрудников
-        System.out.println(dataOfWEmployee.getFamilyName());
+    public static void onlyNamesEmployee(Employee[] dataOfWEmployee) { //ФИО сотрудников
+        for (int i = 0; i < dataOfWEmployee.length; i++) {
+            System.out.println(dataOfWEmployee[i].getFamilyName());
+        }
     }
 }
